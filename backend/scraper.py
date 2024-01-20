@@ -17,6 +17,7 @@ LETTER_DICTIONARY = {
     'a': 'https://www.signingsavvy.com/media2/mp4-ld/26/26710.mp4',
 }
 
+## Used internally for downloading a video given a valid signingsavvy URL
 def query_url_for_video_online(url):
     req = requests.get(url)
     soup = BeautifulSoup(req.content, 'html.parser')
@@ -26,6 +27,9 @@ def query_url_for_video_online(url):
         return un
 
 
+# Queries online for a URL that matches the word
+# Returns a URL if it exists
+# Returns None if you should spell it out
 def query_for_word_online(word : str):
     word = word.lower()
     url = SCRAPE_SOURCE + "search/" + word
@@ -50,10 +54,15 @@ def query_for_word_online(word : str):
     except AttributeError:
         pass
 
-    # TODO: spell out word
     return None
 
 def download_video(url : str, relative_out : str):
-    download = urllib.request.urlretrieve(url, os.path.join(os.path.realpath(__file__), relative_out))
+    download = urllib.request.urlretrieve(url, os.path.join(os.path.dirname(os.path.realpath(__file__)), relative_out))
     return download[0]
-    
+
+# Should be called once prior to running backend   
+def download_letters():
+    for i in range(0, 26):
+        print(i)
+        l = 26710 + i
+        url = 'https://www.signingsavvy.com/media2/mp4-ld/26/' + str(l) + '.mp4'

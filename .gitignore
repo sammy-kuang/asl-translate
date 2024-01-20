@@ -18,3 +18,4 @@ frontend/.env.production.local
 
 # backend
 backend/.venv
+backend/videos/*.mp4
