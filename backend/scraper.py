@@ -66,3 +66,5 @@ def download_letters():
         print(i)
         l = 26710 + i
         url = 'https://www.signingsavvy.com/media2/mp4-ld/26/' + str(l) + '.mp4'
+        download_video(url, "videos/" + chr(i + 65) + '.mp4')
+
