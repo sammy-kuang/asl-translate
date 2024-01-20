@@ -59,7 +59,6 @@ def query_for_word_online(word : str):
 def download_video(url : str, relative_out : str):
     download = urllib.request.urlretrieve(url, os.path.join(os.path.dirname(os.path.realpath(__file__)), relative_out))
     return download[0]
-<<<<<<< HEAD
 
 # Should be called once prior to running backend   
 def download_letters():
@@ -67,6 +66,3 @@ def download_letters():
         print(i)
         l = 26710 + i
         url = 'https://www.signingsavvy.com/media2/mp4-ld/26/' + str(l) + '.mp4'
-=======
-    
->>>>>>> c5d5431e9eb40b2832e9db1309fefb7a3ab0e655
