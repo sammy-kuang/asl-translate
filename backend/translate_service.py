@@ -26,16 +26,32 @@ def get_word(word : str) -> []:
     return out
         
 
+# ffmpeg options
+VIDEO_FORMAT = "mp4"
+# preserve input
+OUTPUT_OPTIONS_PRESERVE = {'c:v' : 'copy', 'c:a' : 'copy'}
+# cache directory
+CACHE_DIR = "cache/"
+
 # Stitches videos with provided url links
 # Returns path to stitched video in ./cache
-def stitch_videos(path):
-    pass
+def stitch_videos(paths, name):
+    inputs = []
+    for path in paths:
+        inputs.append(ffmpeg.input(path))
+
+    # unpack inputs and specify same video and audio streams
+    stitched = ffmpeg.concat(*inputs, v = 1, a = 1)
+
+    stitched.output(stitched, CACHE_DIR + name, **OUTPUT_OPTIONS_PRESERVE).run()
+
+    
 
 
 
 # Adds the text and stitches spelling letters if needed
 # Returns path of modified video
-def transform_video(paths, word):
+def transform_video(paths, name):
     path = paths[0]
     if (len(paths) > 1):
         path = stitch_videos(paths)
@@ -56,5 +72,3 @@ def translate(text):
 
     translated_video_path = stitch_videos(cache_video_paths)
     return translated_video_path
-
-print(get_word("WW2"))
