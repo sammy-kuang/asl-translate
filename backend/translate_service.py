@@ -16,18 +16,33 @@ def get_word(word : str) -> []:
     return out
         
 
+# Stitches videos with provided url links
+# Returns path to stitched video in ./cache
+def stitch_videos(path)
+
+
+
+# Adds the text and stitches spelling letters if needed
+# Returns path of modified video
+def transform_video(paths, word)
+    path = paths[0]
+    if (len(paths) > 1)
+        path = stitch_videos(paths)
+
+    #label_video(path) here
+    return path
+
+
 # TODO entry to translate, returns a 
 def translate(text):
     words = text.split(' ')
 
-    video_urls = []
+    cache_video_paths = []
     for word in words:
-        video = get_word(word)
+        word_paths = get_word(word)
+        word_cache_path = transform_video(word_paths, word)
+        cache_video_paths.append(word_cache_path)
 
-
-
-
-
-    return videos
-
+    translated_video_path = stitch_videos(cache_video_paths)
+    return translated_video_path
 
