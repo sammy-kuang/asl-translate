@@ -3,7 +3,9 @@ import os
 from scraper import query_for_word_online
 from scraper import download_video
 
-# Returns path / paths to mp4 files that either ARE the word or SPELL OUT the word
+import ffmpeg
+
+# Returns list of path(s) to mp4 files that either ARE the word or SPELL OUT the word
 # Fail state is an empty array
 def get_word(word : str) -> []:
     out = []
@@ -14,5 +16,15 @@ def get_word(word : str) -> []:
             pass # TODO: Spell out word
         else:
             out.append(download_video(url, "videos/" + word + ".mp4"))
-
     return out
+        
+
+# TODO entry to translate, returns a 
+def translate(text):
+    words = text.split(' ')
+
+    video_urls = []
+    for word in words:
+        video = get_word(word)
+
+    return videos

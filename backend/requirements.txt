@@ -1,2 +1,4 @@
+ffmepg
+Flask
 beautifulsoup4
 requests
