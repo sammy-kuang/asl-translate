@@ -1,32 +1,21 @@
-from flask import Flask, request, jsonify, send_file
 import sys
+from flask import Flask, request, jsonify, send_file
+from translate_service import translate, VIDEO_FORMAT
 from scraper import download_deps
-# from translate_service import translate
 
 app = Flask(__name__)
 
-# @app.route("/translate", methods=['GET'])
-# def get_translate():
-#     text = request.args.get("text", ValueError)
-#     if (text == ValueError):
-#         # TODO: handle error here
-#         return "error unhandled"
 
-#     cached_video_path = translate(text)
-
-#     # TODO video data
-#     return "TODO"
-#     # return send_file(video_path, mimetype='video/mp4', as_attachment=True)
-
-@app.route("/test", methods=['GET'])
-def test():
+@app.route("/translate", methods=['GET'])
+def get_translate():
     text = request.args.get("text", ValueError)
     if (text == ValueError):
         # TODO: handle error here
         return "error unhandled"
 
-    # return send_file(video_path, mimetype='video/mp4', as_attachment=True)
-    return send_file("videos/" + text + ".mp4", mimetype="video/mp4")
+    cached_video_path = translate(text)
+
+    return send_file(cached_video_path, mimetype="video/" + VIDEO_FORMAT)
     
 
 if __name__ == "__main__":
