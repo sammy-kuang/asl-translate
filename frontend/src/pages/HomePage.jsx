@@ -27,17 +27,22 @@ export default function HomePage() {
 
                 {/* mission statement section */}
                 <div className="mission-statement-container"> 
-                    <h1 className='mission-statement'>About Us</h1>
-                    <p>
-                    Welcome to ASLTranslate, where we believe in breaking down barriers and fostering a world {'\n'}
-                    where communication knows no limits. Our passion for accessibility and education has driven {'\n'}
-                    us to create a platform that empowers individuals to learn American Sign Language (ASL) with ease.{'\n'}
-                    </p>
-
-                    <h1 className='mission-statement'>Our Mission:</h1>
-                        <p>
-                        At ASLTranslate, our mission is to make learning ASL an enriching and accessible experience for everyone. We are dedicated to providing a bridge between spoken language and sign language, fostering inclusivity, understanding, and connection.
-                        </p>
+                    <div className='about-mission-container'>
+                        <div>
+                            <h1 className='mission-statement'>About Us</h1>
+                            <p>
+                            Welcome to ASLTranslate, where we believe in breaking down barriers and fostering a world {'\n'}
+                            where communication knows no limits. Our passion for accessibility and education has driven {'\n'}
+                            us to create a platform that empowers individuals to learn American Sign Language (ASL) with ease.{'\n'}
+                            </p>
+                        </div>
+                        <div>
+                            <h1 className='mission-statement'>Our Mission:</h1>
+                            <p>
+                            At ASLTranslate, our mission is to make learning ASL an enriching and accessible experience for everyone. We are dedicated to providing a bridge between spoken language and sign language, fostering inclusivity, understanding, and connection.
+                            </p>
+                        </div>
+                    </div>
                     <h1 className='mission-statement'>Why ASLTranslate?</h1>    
                         <p>
                         Educational Excellence: Our team comprises experts in linguistics, sign language, and education. We strive to deliver accurate and reliable translations while providing valuable resources for learners at every stage.
@@ -88,6 +93,7 @@ export default function HomePage() {
                         </a>
                     </div>
             </div>
+            <p style={{color:'gray'}}>Special thanks to <a href='https://www.signingsavvy.com/' target='blank'>Signing Savvy</a><br/> who provided all the videos for sign language translation.</p>
         </div>
     )
 }
