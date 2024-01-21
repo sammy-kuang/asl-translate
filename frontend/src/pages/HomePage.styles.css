@@ -6,3 +6,44 @@
     flex-direction: column;
     width: 100%;
 }
+
+
+.mission-statement {
+    text-align: center;
+}
+
+.team-member-text {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.team-member-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.team-member-image {
+  width: 300px;
+  height: 300px;
+}
+
+.homepage-translate-button {
+    opacity: 1;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: #393a3d;
+    color: white;
+    border-radius: 8px;
+    height: 100px;
+    width: 280px;
+
+}
+
+.homepage-translate-button:hover {
+    transform: scale(1.05);
+}

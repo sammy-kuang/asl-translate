@@ -37,9 +37,9 @@ export default function Translator() {
                     Your browser does not support the video tag.
                 </video>
             </div>
-            
-            <button className="translate-button" onClick={handleClick}>Translate</button>
 
+            <button className="translate-button" onClick={handleClick}>Translate</button>
+            <p style={{color:'gray'}}>Disclaimer: English grammar does not always directly translate to ASL grammar,<br/> some English vocabulary may not apply</p>
         </div>
     )
 }

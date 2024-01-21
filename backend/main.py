@@ -31,7 +31,7 @@ def dummy():
     return send_file(video_file, mimetype="video/mp4")
 
 if __name__ == "__main__":
-    # run script with --download-deps to download the numbers and letters for ASL
+# run script with --download-deps to download the numbers and letters for ASL
     if len(sys.argv) >= 2:
         if sys.argv[1] == "--download-deps":
             download_deps()
