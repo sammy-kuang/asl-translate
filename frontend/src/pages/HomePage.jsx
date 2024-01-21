@@ -31,7 +31,7 @@ export default function HomePage() {
                 <div className="mission-statement-container"> 
 
                     <div className='about-mission-container'>
-                        <div>
+                        <div className='about-mission-left-col'>
                             <h1 className='mission-statement'>About Us</h1>
                             <p>
                                 Welcome to ASLTranslate, where we believe in breaking down barriers and fostering a world <br/>
@@ -39,7 +39,7 @@ export default function HomePage() {
                                 us to create a platform that empowers individuals to learn American Sign Language (ASL) with ease.
                             </p>
                         </div>
-                        <div>
+                        <div className='about-mission-right-col'>
                             <h1 className='mission-statement'>Our Mission</h1>
                             <p>
                                 Of course, anyone can communicate without ASLTranslate by simplying pulling out a phone or a piece of paper and write down the words instead,
@@ -73,7 +73,7 @@ export default function HomePage() {
                     <h1>Let's speak with our hands and learn with our hearts!</h1>
 
                     <img src={logoImage}
-                    width='200px'
+                    width='150px'
                     height='auto'
                     alt='logo'
                     onClick = {() => {navigate("/")}}

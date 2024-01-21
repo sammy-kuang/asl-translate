@@ -1,17 +1,26 @@
-.AboutPage {
+/* .AboutPage {
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-}
+} */
 
 .about-mission-container {
   display: flex;
-  gap: 20px; 
+  gap: 50px; 
   margin-bottom: 60px;
-  justify-content: center;
+  /* justify-content: center; */
+  /* width: 900px; */
+}
+
+.about-mission-left-col {
+  width: 40%
+}
+
+.about-mission-right-col {
+  width: 60%
 }
 
 .mission-statement-container {
@@ -19,7 +28,7 @@
   color: white;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 700px;
 }
 
 .mission-statement {
