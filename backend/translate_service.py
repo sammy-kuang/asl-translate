@@ -1,18 +1,16 @@
 import os
 
-from scraper import query_for_word_online
-from scraper import download_video
+from scraper import query_for_word_online, download_video, get_video_directory
 
 import ffmpeg
 
-def get_video_directory() -> str:
-    return os.path.dirname(os.path.realpath(__file__))
 
 # Returns list of path(s) to mp4 files that either ARE the word or SPELL OUT the word
 # Fail state is an empty array
 def get_word(word : str) -> []:
+    word = word.lower()
     out = []
-    check_path = os.path.join(get_video_directory, word + ".mp4")
+    check_path = os.path.join(get_video_directory(), word + ".mp4")
 
     if os.path.exists(check_path):
         out.append(check_path)
@@ -21,10 +19,10 @@ def get_word(word : str) -> []:
     url = query_for_word_online(word)
 
     if url is not None:
-        out.append(download_video(url, "videos/" + word + ".mp4"))
+        out.append(download_video(url, + word + ".mp4"))
     else:
-        for letter in word.split():
-            out.append(os.path.join(get_video_directory(), "videos/" + letter.upper() + ".mp4"))
+        for letter in word:
+            out.append(os.path.join(get_video_directory(), letter.lower() + ".mp4"))
     return out
         
 
@@ -74,7 +72,3 @@ def translate(text):
 
     translated_video_path = stitch_videos(cache_video_paths)
     return translated_video_path
-
-
-
-stitch_videos(["videos/A.mp4", "videos/B.mp4"], "test")
