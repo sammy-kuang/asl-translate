@@ -3,6 +3,8 @@ import ffmpeg
 
 from scraper import query_for_word_online, download_video, VIDEO_DIR
 
+SERVER_ERROR_VIDEO = os.path.join(VIDEO_DIR, "SERVER_ERROR.mp4")
+
 
 # Returns list of path(s) to mp4 files that either ARE the word or SPELL OUT the word
 # Fail state is an empty array
@@ -21,7 +23,12 @@ def get_word(word : str) -> []:
         out.append(download_video(url, word + ".mp4"))
     else:
         for letter in word:
-            out.append(os.path.join(VIDEO_DIR, letter.lower() + ".mp4"))
+            # Assume server already has the letters predownloaded
+            letter_path = os.path.join(VIDEO_DIR, letter.lower() + ".mp4")
+            if not os.path.exists(letter_path):
+                raise Exception("Expected letter to exist, instead not found")
+            out.append(letter_path)
+    
     return out
         
 
@@ -69,7 +76,7 @@ def transform_video(paths, name):
 
     overlayed = input_video.drawtext(name, **TEXT_ARGS)
 
-    output_path = os.path.join(CACHE_DIR, name + "." + VIDEO_FORMAT)
+    output_path = os.path.join(CACHE_DIR, name + "_labeled." + VIDEO_FORMAT)
 
     ffmpeg.output(overlayed, output_path, loglevel = FFMPEG_OUTPUT).run(overwrite_output = True)
 
