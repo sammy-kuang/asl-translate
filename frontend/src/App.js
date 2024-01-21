@@ -12,7 +12,7 @@ function App() {
         height='auto'
         alt='logo'
       />
-      <TranslationPage></TranslationPage>
+      <TranslationPage />
     </div>
   );
 }
