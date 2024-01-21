@@ -10,7 +10,7 @@ export default function Translator() {
         <div className="side-by-side">
             {/* {Input Box} */}
             <div className="side-by-side-items">
-                <input type="text" className="input-box" value={phrase} onChange={(e) => setPhrase(e.target.value)} placeholder="Type a word to translate" />
+                <input type="text" className="input-box" value={phrase} onChange={(e) => setPhrase(e.target.value)} placeholder="Enter text to translate" />
                 <button onClick={(e) => {
                     setUrl("http://127.0.0.1:5000/translate?text="+phrase)
                 }}>Translate</button>

@@ -6,13 +6,15 @@ input.btn[type="submit"]:hover {
     border: 1px solid black;
 }
 
-button {
-    margin-top: 50px;
+.translate-button {
     opacity: 1;
     border-radius: 8px;
+    height: 25px;
+    margin-left: 550px;
+    margin-top: 50px;
 }
 
-button:hover {
+.translate-button:hover {
     opacity: 1.2;
     transform: scale(1.05);
 }
@@ -20,8 +22,7 @@ button:hover {
 .input-box {
     width: 30vw;
     height: 16vw;
-    /* display: flex; */
-    /* margin-left: 35px; */
+    margin-left: 35px;
     background-color: #Ececda;
     border-radius: 9px;
     box-shadow: 4px 4px 4px 4px rgba(37, 33, 33, 0.192);
@@ -31,8 +32,21 @@ button:hover {
     min-width: 200px; /* Set a maximum width for the chatbox */
   }
 
-/* .input-box::placeholder {
+.input-box::placeholder {
     position: absolute;
     top: 3px;
     left: 3px;
-} */
+}
+
+.side-by-side-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    width: 30vw;
+    height: 16vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

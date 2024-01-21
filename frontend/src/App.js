@@ -7,7 +7,11 @@ import TranslationPage from './pages/TranslationPage';
 function App() {
   return (
     <div className="App">
-      <h1 className='head-text'>ASL Translate</h1>
+      <img src={logoImage}
+        width='300px'
+        height='auto'
+        alt='logo'
+      />
       <TranslationPage></TranslationPage>
     </div>
   );

@@ -3,7 +3,9 @@
 }
 
 .App {
-  background: linear-gradient(to top right, #118df0, #5ca9f4);
+  text-align: center;
+  background: linear-gradient(to top right, #118df0, #81bdf9);
+  background-color: #Ececda;
 }
 
 .head-text {
