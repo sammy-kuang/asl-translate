@@ -6,7 +6,8 @@ export default function InputBox() {
 
     return (
         <div className="side-by-side-items">
-            <input type="text" className="input-box" value={word} onChange={(e) => setWord(e.target.value)} placeholder="Type a word to translate" />
+            <input type="text" className="input-box" value={word} onChange={(e) => setWord(e.target.value)} placeholder="Enter text to translate" />
+            <button className='translate-button'>Translate</button>
         </div>
     )
 }

@@ -7,8 +7,13 @@ import logoImage from './images/logo.png';
 function App() {
   return (
     <div className="App">
-      <h1 className='head-text'>ASL Translate</h1>
+      <img src={logoImage} 
+      width = '300px' 
+      height = 'auto' 
+      alt='logo'
+      />
       <div className="side-by-side">
+        <h1></h1>
         <InputBox />
         <VideoPlayer />
       </div>
