@@ -16,6 +16,8 @@ app = Flask(__name__)
 #     return "TODO"
 #     # return send_file(video_path, mimetype='video/mp4', as_attachment=True)
 
+
+# dummy endpoint
 @app.route("/test", methods=['GET'])
 def test():
     text = request.args.get("text", ValueError)

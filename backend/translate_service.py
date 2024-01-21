@@ -13,7 +13,8 @@ def get_video_directory() -> str:
 def get_word(word : str) -> []:
     out = []
     check_path = os.path.join(get_video_directory, word + ".mp4")
-
+    
+    # TODO also check if in cache
     if os.path.exists(check_path):
         out.append(check_path)
         return out
@@ -30,9 +31,6 @@ def get_word(word : str) -> []:
 
 # ffmpeg options
 VIDEO_FORMAT = "mp4"
-# preserve input
-OUTPUT_OPTIONS_PRESERVE = {'c:v' : 'copy', 'c:a' : 'copy'}
-# cache directory
 CACHE_DIR = "cache/"
 
 # Stitches videos with provided url links
@@ -42,13 +40,13 @@ def stitch_videos(paths, name):
     for path in paths:
         inputs.append(ffmpeg.input(path))
 
-    # unpack inputs and specify same video and audio streams
-    stitched = ffmpeg.concat(*inputs, v = 1, a = 1)
+    # unpack inputs and concatenate them
+    stitched = ffmpeg.concat(*inputs)
+    # specify output and run ffmpeg process
 
-    stitched.output(stitched, CACHE_DIR + name, **OUTPUT_OPTIONS_PRESERVE).run()
-
-    
-
+    output_path = CACHE_DIR + name + "." + VIDEO_FORMAT
+    ffmpeg.output(stitched, output_path, loglevel = "quiet").run(overwrite_output = True)
+    return output_path
 
 
 # Adds the text and stitches spelling letters if needed
@@ -74,7 +72,5 @@ def translate(text):
 
     translated_video_path = stitch_videos(cache_video_paths)
     return translated_video_path
-
-
 
 stitch_videos(["videos/A.mp4", "videos/B.mp4"], "test")
