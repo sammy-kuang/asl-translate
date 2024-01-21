@@ -18,5 +18,9 @@ frontend/.env.production.local
 
 # backend
 backend/.venv
+backend/__pycache__
 backend/videos/*.mp4
 backend/cache/
+
+
+

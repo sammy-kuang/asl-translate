@@ -1,20 +1,23 @@
 import os
 
-from scraper import query_for_word_online
-from scraper import download_video
+from scraper import query_for_word_online, download_video, get_video_directory
 
 import ffmpeg
 
-def get_video_directory() -> str:
-    return os.path.dirname(os.path.realpath(__file__))
 
 # Returns list of path(s) to mp4 files that either ARE the word or SPELL OUT the word
 # Fail state is an empty array
 def get_word(word : str) -> []:
+    word = word.lower()
     out = []
+<<<<<<< HEAD
     check_path = os.path.join(get_video_directory, word + ".mp4")
     
     # TODO also check if in cache
+=======
+    check_path = os.path.join(get_video_directory(), word + ".mp4")
+
+>>>>>>> de147151b05d1cad77fbe060b2af6f5a07b040bd
     if os.path.exists(check_path):
         out.append(check_path)
         return out
@@ -22,10 +25,10 @@ def get_word(word : str) -> []:
     url = query_for_word_online(word)
 
     if url is not None:
-        out.append(download_video(url, "videos/" + word + ".mp4"))
+        out.append(download_video(url, + word + ".mp4"))
     else:
-        for letter in word.split():
-            out.append(os.path.join(get_video_directory(), "videos/" + letter.upper() + ".mp4"))
+        for letter in word:
+            out.append(os.path.join(get_video_directory(), letter.lower() + ".mp4"))
     return out
         
 
@@ -71,6 +74,10 @@ def translate(text):
         cache_video_paths.append(word_cache_path)
 
     translated_video_path = stitch_videos(cache_video_paths)
+<<<<<<< HEAD
     return translated_video_path
 
 stitch_videos(["videos/A.mp4", "videos/B.mp4"], "test")
+=======
+    return translated_video_path
+>>>>>>> de147151b05d1cad77fbe060b2af6f5a07b040bd
