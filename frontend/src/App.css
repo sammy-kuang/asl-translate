@@ -4,10 +4,21 @@
 
 .App {
   text-align: center;
-  background: linear-gradient(to top right, #118df0, #5ca9f4);
+  background: linear-gradient(to top right, #118df0, #81bdf9);
 }
 
 .head-text {
   color: #Ececda;
 }
 
+.side-by-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.side-by-side-items {
+  display: flex;
+  justify-content: space-between;
+}
