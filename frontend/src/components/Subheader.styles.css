@@ -1,0 +1,28 @@
+
+.subheader-parent {
+    width: auto;
+    display: flex;
+    padding-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    align-items: center;
+    gap: 30px;
+}
+
+.subheader-logo {
+    width: auto;
+    height: 120px;
+    cursor: pointer;
+}
+
+.subheader-logo:hover {
+    transform: scale(1.05);
+}
+
+.subheader-text {
+    color: white;
+    font-size: 50px;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}

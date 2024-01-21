@@ -99,4 +99,3 @@ def translate(text):
         translated_video_path = stitch_videos(cache_video_paths, text)
 
     return translated_video_path
-
