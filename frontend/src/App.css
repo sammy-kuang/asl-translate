@@ -1,10 +1,12 @@
 * {
   margin-top: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .App {
   text-align: center;
-  background: linear-gradient(to top right, #118df0, #81bdf9);
+  background: linear-gradient(to top right, #485158, #8eb7df);
   background-color: #Ececda;
 }
 
@@ -22,4 +24,9 @@
 .side-by-side-items {
   display: flex;
   justify-content: space-between;
+
+}
+
+.text {
+  color: #Ececda;
 }

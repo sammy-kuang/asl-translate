@@ -9,9 +9,8 @@ input.btn[type="submit"]:hover {
 .translate-button {
     opacity: 1;
     border-radius: 8px;
-    height: 25px;
-    margin-left: 550px;
-    margin-top: 50px;
+    margin: auto;
+    margin-left: 630px;
 }
 
 .translate-button:hover {
@@ -21,15 +20,15 @@ input.btn[type="submit"]:hover {
 
 .input-box {
     width: 30vw;
-    height: 16vw;
-    margin-left: 35px;
+    height: 18.7vw;
+    margin-left: 10px;
+    margin-top: 75px;
+    margin-bottom: 50px;
     background-color: #Ececda;
-    border-radius: 9px;
-    box-shadow: 4px 4px 4px 4px rgba(37, 33, 33, 0.192);
+    /* box-shadow: 4px 4px 4px 4px rgba(37, 33, 33, 0.192); */
     position: left;
-    border-radius: 10px; /* Set border radius for rounded corners */
-    padding: 20px; /* Add some padding for better visual appearance */
-    min-width: 200px; /* Set a maximum width for the chatbox */
+    padding: 20px; 
+    min-width: 200px; 
   }
 
 .input-box::placeholder {

@@ -7,13 +7,13 @@ import logoImage from './images/logo.png';
 function App() {
   return (
     <div className="App">
-      <img src={logoImage} 
-      width = '300px' 
+      <img className='image' src={logoImage} 
+      width = '200px' 
       height = 'auto' 
       alt='logo'
       />
+      <h1 className='text'>Speak with Your Hands, Learn with Your Heart</h1>
       <div className="side-by-side">
-        <h1></h1>
         <InputBox />
         <VideoPlayer />
       </div>
