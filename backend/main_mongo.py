@@ -26,13 +26,13 @@ def handleTranslation(text):
             video_file = FS.get(ObjectId(search_file_in_gridfs(word + "." + VIDEO_FORMAT)))
         except Exception:
             # Assume only error thrown by FS.get() is NoFileFound or something
-            print("'" + word + "' not found, adding to MongoDB")
+            # print("'" + word + "' not found, adding to MongoDB")
             new_word = translate(word)
             video_paths.append(new_word)
             upload_to_gridfs(new_word, word + "." + VIDEO_FORMAT)
             continue
-        print("'" + word + "' found, retrieving from MongoDB")
-        print(type(video_file))
+        # print("'" + word + "' found, retrieving from MongoDB")
+        # print(type(video_file))
         temp_file = tempfile.NamedTemporaryFile(suffix = "." + VIDEO_FORMAT)
         temp_files.append(temp_file)
         video_paths.append(temp_file.name)

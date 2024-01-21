@@ -11,7 +11,7 @@ export default function Subheader() {
             <img className="subheader-logo" src={logoImage} 
                 onClick = {() => {navigate("/")}}
                 alt='logo-alt'/>
-            <p className="subheader-text">ASL TRANSLATE</p>
+            <p className="subheader-text">ASLTRANSLATE</p>
         </div>
     );
 }
