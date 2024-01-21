@@ -5,7 +5,10 @@ export default function Header() {
     const navigate = useNavigate()
 
     return (
-        <div>
+        <div style={{
+
+            marginTop:'50px',
+        }}>
             <img src={logoImage}
                 width='300px'
                 height='auto'

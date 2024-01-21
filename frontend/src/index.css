@@ -1,13 +1,12 @@
-* {
-  background-color: white;
-}
-
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Poppins', sans-serif;
+  /* background: linear-gradient(to top right, #485158, #8eb7df); */
+  background-color: #222224;
+
 }
 
 code {
