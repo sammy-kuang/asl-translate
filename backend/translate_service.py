@@ -47,15 +47,33 @@ def stitch_videos(paths, name):
     return output_path
 
 
+# Overlay text constants
+TEXT_ARGS = {"fontsize": "50",
+            "x" : "w / 2 - text_w / 2",
+            "y" : "h - text_h - 10", 
+            "fontcolor" : "white", 
+            "borderw" : "3",
+            "bordercolor" : "black"}
+
+
 # Adds the text and stitches spelling letters if needed
 # Returns path of modified video
 def transform_video(paths, name):
     path = paths[0]
+    # Stitch spelled out words
     if (len(paths) > 1):
         path = stitch_videos(paths, name)
 
-    #label_video(path) here
-    return path
+    # Label image
+    input_video = ffmpeg.input(path)
+
+    overlayed = input_video.drawtext(name, **TEXT_ARGS)
+
+    output_path = os.path.join(CACHE_DIR, name + "." + VIDEO_FORMAT)
+
+    ffmpeg.output(overlayed, output_path, loglevel = FFMPEG_OUTPUT).run(overwrite_output = True)
+
+    return output_path
 
 
 # Entry to translate, returns a path to the cached video

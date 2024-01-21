@@ -5,7 +5,7 @@ from scraper import download_deps
 
 app = Flask(__name__)
 
-
+# Make request with `/translate?text=`
 @app.route("/translate", methods=['GET'])
 def get_translate():
     text = request.args.get("text", ValueError)
