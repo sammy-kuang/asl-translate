@@ -4,10 +4,13 @@
 
 .App {
   text-align: center;
-  background: linear-gradient(to top right, #118df0, #5ca9f4);
+  background: linear-gradient(to top right, #118df0, #81bdf9);
 }
 
 .head-text {
   color: #Ececda;
 }
 
+.logo {
+  
+}
