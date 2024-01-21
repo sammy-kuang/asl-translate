@@ -16,7 +16,10 @@ frontend/.env.development.local
 frontend/.env.test.local
 frontend/.env.production.local
 
+*/.DS_Store
+
 # backend
 backend/.venv
 backend/__pycache__
 backend/videos/*.mp4
+
