@@ -47,4 +47,5 @@
     opacity: 1;
     background-color: #45464a;
     transform: scale(1.05);
+    cursor: pointer;
 }

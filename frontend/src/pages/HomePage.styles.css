@@ -9,18 +9,21 @@
 
 .about-mission-container {
   display: flex;
-  gap: 50px; 
-  margin-bottom: 60px;
-  /* justify-content: center; */
-  /* width: 900px; */
+  gap: 10%; 
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
 
 .about-mission-left-col {
-  width: 40%
+  width: 50%;
 }
 
 .about-mission-right-col {
-  width: 60%
+  width: 50%
 }
 
 .mission-statement-container {
@@ -28,14 +31,17 @@
   color: white;
   margin-left: auto;
   margin-right: auto;
-  width: 700px;
+  width: 70%;
 }
 
-.mission-statement {
-    margin-top: 100px;
-    /* color: white; */
-
+.about-subtitle {
+  margin-top: 100px;
 }
+
+.about-body {
+  width: 100%;
+}
+
 
 .team-member-text {
     margin-top: 100px;
@@ -64,23 +70,28 @@
   transform: scale(1.03);
 }
 
+p {
+  font-size: 18px;
+}
+
 a {
   text-decoration: none;
   color: white;
 }
 
 .homepage-translate-button {
-    opacity: 1;
-    font-size: 25px;
-    font-weight: bolder;
-    background-color: #393a3d;
-    color: white;
-    border-radius: 8px;
-    height: 100px;
-    width: 280px;
+  opacity: 1;
+  font-size: 25px;
+  font-weight: bolder;
+  background-color: #393a3d;
+  color: white;
+  border-radius: 8px;
+  height: 100px;
+  width: 280px;
 
 }
 
 .homepage-translate-button:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
+  cursor: pointer;
 }

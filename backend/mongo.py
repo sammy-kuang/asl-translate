@@ -1,11 +1,16 @@
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from gridfs import GridFS
+import os
 
+
+# Read private token
 uri = ""
+MONGO_TOKEN_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), ".mongodb")
 
-with open(".mongodb", 'r') as file:
+with open(MONGO_TOKEN_PATH, 'r') as file:
     uri = file.read()
+    
 
 # Create a new client and connect to the server
 client = MongoClient(str(uri), server_api=ServerApi('1'))
