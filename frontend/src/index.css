@@ -6,7 +6,6 @@ body {
   font-family: 'Poppins', sans-serif;
   /* background: linear-gradient(to top right, #485158, #8eb7df); */
   background-color: #222224;
-
 }
 
 code {
@@ -16,5 +15,5 @@ code {
 }
 
 p {
-  color: black;
+  color: white;
 }
