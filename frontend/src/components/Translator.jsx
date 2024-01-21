@@ -21,24 +21,24 @@ export default function Translator() {
     };
 
     return (
-        <div className="side-by-side">
+        <div className="translator-parent">
             {/* Input Box */}
-            <div className="side-by-side-box">
-                <input type="text" className="input-box" 
+
+            <div className="input-output-container">
+                <textarea type="text" className="input-text-area" 
                 value={phrase}
                 onSubmit={handleClick}
                 onChange={(e) => handleTextChange(e)}
                 placeholder="Enter text to translate" />
-            </div>
 
-            <button className="translate-button" onClick={handleClick}>Translate</button>
+                {/*Video player*/}
 
-            {/*Video player*/}
-            <div className="side-by-side-box">
-                <video type="video/mp4" src={url} controls autoPlay>
+                <video className="output-video" type="video/mp4" src={url} controls autoPlay>
                     Your browser does not support the video tag.
                 </video>
             </div>
+            
+            <button className="translate-button" onClick={handleClick}>Translate</button>
 
         </div>
     )
