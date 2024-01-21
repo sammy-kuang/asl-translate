@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 
-import AboutPage from './pages/AboutPage';
+import HomePage from './pages/HomePage';
 import TranslationPage from './pages/TranslationPage';
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -11,9 +11,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header/>
         <Routes>
-          <Route path="/" exact Component={AboutPage}></Route>
+          <Route path="/" exact Component={HomePage}></Route>
           <Route path="/translate" Component={TranslationPage}></Route>
         </Routes >
       </div >

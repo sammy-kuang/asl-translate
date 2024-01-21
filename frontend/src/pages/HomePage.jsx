@@ -1,11 +1,11 @@
-import './AboutPage.styles.css'
+import './HomePage.styles.css'
 import {useNavigate} from 'react-router-dom'
 
-export default function AboutPage() {
+export default function HomePage() {
     const navigate = useNavigate()
 
     return (
-        <div className="AboutPage">
+        <div className="HomePage">
             <p>
                 Hello world!
             </p>
