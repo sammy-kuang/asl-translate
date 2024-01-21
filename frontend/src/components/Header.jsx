@@ -10,7 +10,6 @@ export default function Header() {
                 width='300px'
                 height='auto'
                 alt='logo'
-
                 onClick = {() => {navigate("/")}}
             />
             <h1 className='text'>Speak with Your Hands, Learn with Your Heart</h1>
