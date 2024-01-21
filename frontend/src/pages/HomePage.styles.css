@@ -6,3 +6,14 @@
     flex-direction: column;
     width: 100%;
 }
+
+.homepage-translate-button {
+    opacity: 1;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: #393a3d;
+    color: white;
+    border-radius: 8px;
+    height: 100px;
+    width: 280px;
+}

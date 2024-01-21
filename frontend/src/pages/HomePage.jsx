@@ -1,18 +1,16 @@
 import './HomePage.styles.css'
 import {useNavigate} from 'react-router-dom'
+import Header from '../components/Header'
 
 export default function HomePage() {
     const navigate = useNavigate()
 
     return (
         <div className="HomePage">
-            <p>
-                Hello world!
-            </p>
+        <Header/>
 
             <div>
-                <button onClick={() => {navigate("translate")}}>Translate!</button>
-                <button>Test me!</button>
+                <button className="homepage-translate-button" onClick={() => {navigate("translate")}}>Begin translating!</button>
             </div>
 
         </div>
