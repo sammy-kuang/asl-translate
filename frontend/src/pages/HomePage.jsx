@@ -29,14 +29,16 @@ export default function HomePage() {
                 <div className="mission-statement-container"> 
                     <h1 className='mission-statement'>About Us</h1>
                     <p>
-                    Welcome to ASLTranslate, where we believe in breaking down barriers and fostering a world {'\n'}
-                    where communication knows no limits. Our passion for accessibility and education has driven {'\n'}
-                    us to create a platform that empowers individuals to learn American Sign Language (ASL) with ease.{'\n'}
+                        Welcome to ASLTranslate, where we believe in breaking down barriers and fostering a world <br/>
+                        where communication knows no limits. Our passion for accessibility and education has driven <br/>
+                        us to create a platform that empowers individuals to learn American Sign Language (ASL) with ease.
                     </p>
 
-                    <h1 className='mission-statement'>Our Mission:</h1>
+                    <h1 className='mission-statement'>Our Mission</h1>
                         <p>
-                        At ASLTranslate, our mission is to make learning ASL an enriching and accessible experience for everyone. We are dedicated to providing a bridge between spoken language and sign language, fostering inclusivity, understanding, and connection.
+                        Of course, anyone can communicate without ASLTranslate by simplying pulling out a phone or a piece of paper and write down the words instead,
+                        but the aim of ASLTranslate is to foster the learning process of ASL to go beyond communication and generate deeper interpersonal connections. <br/><br/>
+                        ASLTranslate's mission is to make learning ASL an enriching and accessible experience for everyone. We are dedicated to providing a bridge between spoken language and sign language, fostering inclusivity, understanding, and connection.
                         </p>
                     <h1 className='mission-statement'>Why ASLTranslate?</h1>    
                         <p>
@@ -48,17 +50,17 @@ export default function HomePage() {
                         <p>
                         Inclusivity Matters: ASLTranslate is committed to inclusivity. Our platform is designed to cater to diverse learning styles, ensuring that everyone, from beginners to advanced learners, can find value in our resources.
                         </p>
-                    <h1 className='mission-statement'>How We Work:</h1>
+                    <h1 className='mission-statement'>How We Work</h1>
                         <p>
                         Passion for Learning: We are lifelong learners ourselves, and our passion for continuous improvement is reflected in the features and content we provide.
 
                         User-Centric Approach: ASLTranslate is designed with you in mind. We constantly gather user feedback to enhance our platform, making it more intuitive and effective for learners of all backgrounds.
                         </p>
-                    <h1 className='mission-statement'>Join Us in Bridging Worlds:</h1>
+                    <h1 className='mission-statement'>Join Us in Bridging Worlds</h1>
                         <p>
                         ASLTranslate is more than just a tool; it's a community committed to breaking down communication barriers. Whether you're a student, a professional, or someone curious about sign language, we invite you to join us on this journey of learning, understanding, and connection.
                         </p>
-                    <h1 className='mission-statement'>Thank you for choosing ASLTranslate. </h1>
+                    <h1 className='mission-statement'>Thank you for choosing ASLTranslate.</h1>
                     <h1>Let's speak with our hands and learn with our hearts!</h1>
                 </div>
 
