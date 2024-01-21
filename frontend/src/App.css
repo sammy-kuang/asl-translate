@@ -11,6 +11,14 @@
   color: #Ececda;
 }
 
-.logo {
-  
+.side-by-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.side-by-side-items {
+  display: flex;
+  justify-content: space-between;
 }
