@@ -7,17 +7,25 @@
     width: 100%;
 }
 
+.about-mission-container {
+  display: flex;
+  gap: 20px; 
+  margin-bottom: 60px;
+  justify-content: center;
+}
+
 .mission-statement-container {
   text-align: center;
   color: white;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 60%;
 }
 
 .mission-statement {
     margin-top: 100px;
     /* color: white; */
+
 }
 
 .team-member-text {
@@ -34,6 +42,7 @@
     margin-left: 130px;
     margin-right: 130px;
     color: white;
+    margin-bottom: 50px;
 }
 
 .team-member-pic {
