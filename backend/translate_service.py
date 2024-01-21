@@ -57,7 +57,7 @@ def stitch_videos(paths, name):
 # Overlay text constants
 TEXT_ARGS = {"fontsize": "50",
             "x" : "w / 2 - text_w / 2",
-            "y" : "h - text_h - 10", 
+            "y" : "10", 
             "fontcolor" : "white", 
             "borderw" : "3",
             "bordercolor" : "black"}

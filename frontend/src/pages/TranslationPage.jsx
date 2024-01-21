@@ -3,6 +3,6 @@ import Translator from '../components/Translator';
 
 export default function TranslationPage() {
     return (
-        <Translator></Translator>
+        <Translator />
     );
 }

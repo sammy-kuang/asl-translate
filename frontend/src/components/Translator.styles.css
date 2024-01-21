@@ -9,44 +9,43 @@ input.btn[type="submit"]:hover {
 .translate-button {
     opacity: 1;
     border-radius: 8px;
-    height: 25px;
-    margin-left: 550px;
-    margin-top: 50px;
+    height: 80px;
+    width: 100px;
 }
 
 .translate-button:hover {
-    opacity: 1.2;
+    opacity: 1;
     transform: scale(1.05);
 }
 
 .input-box {
-    width: 30vw;
-    height: 16vw;
-    margin-left: 35px;
+    width: 100px;
+    height: 100px;
+    /* margin-left: 35px; */
     background-color: #Ececda;
     border-radius: 9px;
     box-shadow: 4px 4px 4px 4px rgba(37, 33, 33, 0.192);
-    position: left;
+
     border-radius: 10px; /* Set border radius for rounded corners */
     padding: 20px; /* Add some padding for better visual appearance */
-    min-width: 200px; /* Set a maximum width for the chatbox */
-  }
-
-.input-box::placeholder {
-    position: absolute;
-    top: 3px;
-    left: 3px;
+    min-width: 100%; /* Set a maximum width for the chatbox */
+    min-height: 100%; /* Set a maximum width for the chatbox */
 }
 
-.side-by-side-items {
+.side-by-side {
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+}
+
+.side-by-side-box {
+    width: 30%;
+    height: 100%;
 }
 
 video {
-    width: 30vw;
-    height: 16vw;
+    width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
