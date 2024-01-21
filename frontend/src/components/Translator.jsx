@@ -2,8 +2,8 @@ import { useState } from "react"
 import './Translator.styles.css'
 
 
-const SERVER_IP = "http://127.0.0.1:5000/"
-const GET = "translate?text="
+export const SERVER_IP = "http://127.0.0.1:5000/"
+export const GET = "translate?text="
 const DEFAULT = SERVER_IP + GET + "hello"
 
 export default function Translator() {
