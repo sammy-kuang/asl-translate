@@ -79,7 +79,13 @@ a {
   color: white;
 }
 
-.homepage-translate-button {
+.routes {
+  display: flex;
+  justify-content: center;
+  gap: 6%;
+}
+
+.homepage-router-button {
   opacity: 1;
   font-size: 25px;
   font-weight: bolder;
@@ -91,7 +97,7 @@ a {
 
 }
 
-.homepage-translate-button:hover {
+.homepage-router-button:hover {
   transform: scale(1.05);
   cursor: pointer;
 }

@@ -1,0 +1,40 @@
+
+
+
+.reveal-button {
+    width: 480px;
+    height: 270px;
+    opacity: 1; 
+    font-size: 50px;
+    background-color: #393a3d;
+    color: white;
+    border-radius: 8px;
+}
+
+
+
+.next-button {
+    opacity: 1;
+    font-size: 20px;
+    background-color: #393a3d;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    height: 80px;
+    width: 140px;
+
+}
+
+.reveal-button:hover {
+    background-color: #45464a;
+    transform: scale(0.95);
+}
+
+.next-button:hover {
+    background-color: #45464a;
+    transform: scale(1.05);
+}
+
+.reveal-button:hover, .next-button:hover {
+    cursor: pointer;
+}

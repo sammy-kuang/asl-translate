@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react"
 import { SERVER_IP, GET } from "../components/Translator"
 import Subheader from "../components/Subheader"
+import "./QuizPage.styles.css"
 
 export default function QuizPage() {
 
     const [wordInd, setWordInd] = useState(0)
-    const list = ["Hello", "Goodbye", "Thank you", "Sorry"]
+    // can possible replace with some API call to retrieve commonly used words
+    const list = ["Hello", "Goodbye", "Thank you", "Sorry", "Oops", "Help", "Wow"]
     const [url, setUrl] = useState(SERVER_IP + GET + list[wordInd])
     const [revealed, setRevealed] = useState(false)
 
@@ -19,13 +21,10 @@ export default function QuizPage() {
         return rand
     }
 
-    function updateUrl() {
-        setUrl(SERVER_IP + GET + list[wordInd])
-    }
-
     useEffect(() => {
         setUrl(SERVER_IP + GET + list[wordInd])
         setRevealed(false)
+    // eslint-disable-next-line
     }, [wordInd]);
 
     return (
@@ -37,23 +36,23 @@ export default function QuizPage() {
                     <video className="output-video" type="video/mp4" src={url} controls autoPlay>
                         Your browser does not support the video tag.
                     </video>) :
-                    (<div>
-                        {/* Not revealed yet stuff here IG */}
-                    </div>)
+                    <></>
                 }
             </div>
 
             <p>
-                <button onClick={() => {
+                {!revealed ? (
+                <button className="reveal-button" onClick={() => {
                     setRevealed(true)
                 }}>Reveal</button>
+                ) : <></>}
             </p>
 
 
             <p>
-                <button onClick={() => {
+                <button className="next-button" onClick={() => {
                     setWordInd(getRandomInd(0, list.length, wordInd))
-                }}>Refresh</button>
+                }}>Next</button>
             </p>
 
         </div >

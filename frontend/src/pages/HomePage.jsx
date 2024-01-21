@@ -1,7 +1,7 @@
 import './HomePage.styles.css'
 import {useNavigate} from 'react-router-dom'
 import Header from '../components/Header'
-import logoImage from '../images/logo.png';
+import logoImageAlt from '../images/logo-alt.png';
 import erniePic from '../images/ernie.png';
 import jackPic from '../images/jack.jpg';
 import anthonyPic from '../images/anthony.jpg';
@@ -15,8 +15,9 @@ export default function HomePage() {
         <div className="HomePage">
             <Header/>
 
-                <div>
-                    <button className="homepage-translate-button" onClick={() => {navigate("translate")}}>Begin translating!</button>
+                <div className='routes'>
+                    <button className="homepage-router-button" onClick={() => {navigate("translate")}}>Begin translating!</button>
+                    <button className="homepage-router-button" onClick={() => {navigate("quiz")}}>Test yourself!</button>
                 </div>
                 <br/>
                 <br/>
@@ -42,7 +43,7 @@ export default function HomePage() {
                         <div className='about-mission-right-col'>
                             <h1 className='about-subtitle'>Our Mission</h1>
                             <p>
-                                Of course, anyone can communicate without ASLTranslate by simplying pulling out a phone or a piece of paper and communicate text instead,
+                                Of course, anyone can communicate without ASLTranslate by simply pulling out a phone or a piece of paper and communicate text instead,
                                 but the aim of ASLTranslate is to foster the learning process of ASL to go beyond communication and generate deeper interpersonal connections. <br/><br/>
                                 ASLTranslate's mission is to make learning ASL an enriching and accessible experience for everyone.
                             </p>
@@ -56,7 +57,7 @@ export default function HomePage() {
                     <h1 className='about-subtitle'>Thank you for choosing ASLTranslate.</h1>
                     <h1>Let's speak with our hands and learn with our hearts!</h1>
 
-                    <img src={logoImage}
+                    <img src={logoImageAlt}
                     width='150px'
                     height='auto'
                     alt='logo'
@@ -68,27 +69,27 @@ export default function HomePage() {
                 <h1 className='team-member-text'>Meet the project team!</h1>
                 <div className='team-member-container'>
                     <div className='team-member'>
-                        <a href="https://github.com/sammy-kuang" target="_blank">
+                        <a href="https://github.com/sammy-kuang">
                             <h3>Sammy</h3>
-                            <img className='team-member-pic' src={sammyPic} alt='Photo of Sammy'/>
+                            <img className='team-member-pic' src={sammyPic} alt='Sammy'/>
                         </a>
                     </div>
                     <div className='team-member'>
-                        <a href="https://www.linkedin.com/in/j-ackyao/" target="_blank">
+                        <a href="https://www.linkedin.com/in/j-ackyao/">
                             <h3>Jack</h3>
-                            <img className='team-member-pic' src={jackPic} alt='Photo of Jack'/>
+                            <img className='team-member-pic' src={jackPic} alt='Jack'/>
                         </a>
                     </div>
                     <div className='team-member'>
-                        <a href="https://www.linkedin.com/in/anthony-ji-b898a0290/" target="_blank">
+                        <a href="https://www.linkedin.com/in/anthony-ji-b898a0290/">
                             <h3>Anthony</h3>
-                            <img className='team-member-pic' src={anthonyPic} alt='Photo of Anthony'/>
+                            <img className='team-member-pic' src={anthonyPic} alt='Anthony'/>
                         </a>
                     </div>
                     <div className='team-member'>
-                        <a href="https://www.linkedin.com/in/erniehan/" target="_blank">
+                        <a href="https://www.linkedin.com/in/erniehan/">
                             <h3>Ernie</h3>
-                            <img className='team-member-pic' src={erniePic} alt='Photo of Ernie'/>
+                            <img className='team-member-pic' src={erniePic} alt='Ernie'/>
                         </a>
                     </div>
             </div>
