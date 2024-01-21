@@ -2,3 +2,4 @@ ffmpeg-python
 Flask
 beautifulsoup4
 requests
+pymongo[srv]
