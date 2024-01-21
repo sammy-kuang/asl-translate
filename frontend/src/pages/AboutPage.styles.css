@@ -1,0 +1,8 @@
+.AboutPage {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}

@@ -30,7 +30,7 @@ def get_word(word : str) -> []:
             out.append(letter_path)
     
     return out
-        
+
 
 # FFmpeg constants
 VIDEO_FORMAT = "mp4"
