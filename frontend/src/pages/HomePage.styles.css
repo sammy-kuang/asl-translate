@@ -7,29 +7,47 @@
     width: 100%;
 }
 
+.mission-statement-container {
+  text-align: center;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
 
 .mission-statement {
-    text-align: center;
+    margin-top: 100px;
+    /* color: white; */
 }
 
 .team-member-text {
-    margin-top: 70px;
+    margin-top: 150px;
     text-align: center;
+    color: white;
+    text-decoration: none;
 }
 
 .team-member-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 130px;
+    margin-right: 130px;
+    color: white;
 }
 
-.team-member-image {
-  width: 300px;
-  height: 300px;
+.team-member-pic {
+  width: 270px;
+  height: 270px;
+  border-radius: 15px;
+}
+.team-member-pic:hover {
+  transform: scale(1.03);
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .homepage-translate-button {
