@@ -23,7 +23,7 @@ def get_word(word : str) -> []:
         for letter in word:
             out.append(os.path.join(VIDEO_DIR, letter.lower() + ".mp4"))
     return out
-        
+
 
 # FFmpeg constants
 VIDEO_FORMAT = "mp4"
