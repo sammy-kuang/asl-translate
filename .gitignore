@@ -22,6 +22,7 @@ frontend/.env.production.local
 backend/.venv
 backend/__pycache__
 backend/videos/*.mp4
+!backend/videos/SERVER_ERROR.mp4
 backend/cache/
 
 

@@ -1,19 +1,25 @@
 import sys
+import traceback
 from flask import Flask, request, jsonify, send_file
-from translate_service import translate, VIDEO_FORMAT
+from translate_service import translate, VIDEO_FORMAT, SERVER_ERROR_VIDEO
 from scraper import download_deps
 
 app = Flask(__name__)
 
-
+# Make request with `/translate?text=`
 @app.route("/translate", methods=['GET'])
 def get_translate():
     text = request.args.get("text", ValueError)
     if (text == ValueError):
-        # TODO: handle error here
-        return "error unhandled"
+        return send_file(SERVER_ERROR_VIDEO, mimetype="video/" + VIDEO_FORMAT)
+    
+    cached_video_path = None
+    try:
+        cached_video_path = translate(text)
+    except Exception:
+        print(traceback.format_exc())
+        cached_video_path = SERVER_ERROR_VIDEO
 
-    cached_video_path = translate(text)
 
     return send_file(cached_video_path, mimetype="video/" + VIDEO_FORMAT)
     
