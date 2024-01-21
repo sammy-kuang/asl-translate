@@ -1,19 +1,23 @@
 import './App.css';
+import Header from './components/Header';
 
-import logoImage from './images/logo.png';
 import AboutPage from './pages/AboutPage';
 import TranslationPage from './pages/TranslationPage';
 
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 function App() {
   return (
-    <div className="App">
-      <img src={logoImage}
-        width='300px'
-        height='auto'
-        alt='logo'
-      />
-      <TranslationPage></TranslationPage>
-    </div>
+    <Router>
+      <div className="App">
+        <Header/>
+        <Routes>
+          <Route path="/" exact Component={AboutPage}></Route>
+          <Route path="/translate" Component={TranslationPage}></Route>
+        </Routes >
+      </div >
+    </Router>
   );
 }
 

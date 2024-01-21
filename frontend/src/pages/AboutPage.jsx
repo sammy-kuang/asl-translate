@@ -1,6 +1,9 @@
 import './AboutPage.styles.css'
+import {useNavigate} from 'react-router-dom'
 
 export default function AboutPage() {
+    const navigate = useNavigate()
+
     return (
         <div className="AboutPage">
             <p>
@@ -8,7 +11,7 @@ export default function AboutPage() {
             </p>
 
             <div>
-                <button>Translate!</button>
+                <button onClick={() => {navigate("translate")}}>Translate!</button>
                 <button>Test me!</button>
             </div>
 
