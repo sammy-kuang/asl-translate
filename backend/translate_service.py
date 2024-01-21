@@ -1,8 +1,7 @@
 import os
-
-from scraper import query_for_word_online, download_video, get_video_directory
-
 import ffmpeg
+
+from scraper import query_for_word_online, download_video, VIDEO_DIR
 
 
 # Returns list of path(s) to mp4 files that either ARE the word or SPELL OUT the word
@@ -10,14 +9,8 @@ import ffmpeg
 def get_word(word : str) -> []:
     word = word.lower()
     out = []
-<<<<<<< HEAD
-    check_path = os.path.join(get_video_directory, word + ".mp4")
-    
-    # TODO also check if in cache
-=======
-    check_path = os.path.join(get_video_directory(), word + ".mp4")
+    check_path = os.path.join(VIDEO_DIR, word + ".mp4")
 
->>>>>>> de147151b05d1cad77fbe060b2af6f5a07b040bd
     if os.path.exists(check_path):
         out.append(check_path)
         return out
@@ -25,16 +18,18 @@ def get_word(word : str) -> []:
     url = query_for_word_online(word)
 
     if url is not None:
-        out.append(download_video(url, + word + ".mp4"))
+        out.append(download_video(url, word + ".mp4"))
     else:
         for letter in word:
-            out.append(os.path.join(get_video_directory(), letter.lower() + ".mp4"))
+            out.append(os.path.join(VIDEO_DIR, letter.lower() + ".mp4"))
     return out
         
 
-# ffmpeg options
+# FFmpeg constants
 VIDEO_FORMAT = "mp4"
-CACHE_DIR = "cache/"
+CACHE_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), "cache")
+# refer to https://ffmpeg.org/ffmpeg.html for output flags
+FFMPEG_OUTPUT = "error"
 
 # Stitches videos with provided url links
 # Returns path to stitched video in ./cache
@@ -43,12 +38,12 @@ def stitch_videos(paths, name):
     for path in paths:
         inputs.append(ffmpeg.input(path))
 
-    # unpack inputs and concatenate them
+    # Unpack inputs and concatenate them
     stitched = ffmpeg.concat(*inputs)
-    # specify output and run ffmpeg process
+    # Specify output and run ffmpeg process
 
-    output_path = CACHE_DIR + name + "." + VIDEO_FORMAT
-    ffmpeg.output(stitched, output_path, loglevel = "quiet").run(overwrite_output = True)
+    output_path = os.path.join(CACHE_DIR, name + "." + VIDEO_FORMAT)
+    ffmpeg.output(stitched, output_path, loglevel = FFMPEG_OUTPUT).run(overwrite_output = True)
     return output_path
 
 
@@ -57,13 +52,13 @@ def stitch_videos(paths, name):
 def transform_video(paths, name):
     path = paths[0]
     if (len(paths) > 1):
-        path = stitch_videos(paths)
+        path = stitch_videos(paths, name)
 
     #label_video(path) here
     return path
 
 
-# TODO entry to translate, returns a 
+# Entry to translate, returns a path to the cached video
 def translate(text):
     words = text.split(' ')
 
@@ -73,11 +68,10 @@ def translate(text):
         word_cache_path = transform_video(word_paths, word)
         cache_video_paths.append(word_cache_path)
 
-    translated_video_path = stitch_videos(cache_video_paths)
-<<<<<<< HEAD
+    translated_video_path = cache_video_paths[0]
+
+    if len(cache_video_paths) > 1:
+        translated_video_path = stitch_videos(cache_video_paths, text)
+
     return translated_video_path
 
-stitch_videos(["videos/A.mp4", "videos/B.mp4"], "test")
-=======
-    return translated_video_path
->>>>>>> de147151b05d1cad77fbe060b2af6f5a07b040bd

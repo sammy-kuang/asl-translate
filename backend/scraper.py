@@ -13,8 +13,7 @@ HEADERS = {
     'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
     }
 
-def get_video_directory() -> str:
-    return os.path.join(os.path.dirname(os.path.realpath(__file__)), "videos")
+VIDEO_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), "videos")
 
 ## Used internally for downloading a video given a valid signingsavvy URL
 def query_url_for_video_online(url):
@@ -56,7 +55,7 @@ def query_for_word_online(word : str):
     return None
 
 def download_video(url : str, filename : str):
-    download = urllib.request.urlretrieve(url, os.path.join(get_video_directory(), filename))
+    download = urllib.request.urlretrieve(url, os.path.join(VIDEO_DIR, filename))
     return download[0]
 
 def download_letters():
