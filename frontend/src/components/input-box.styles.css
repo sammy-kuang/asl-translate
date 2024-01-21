@@ -1,0 +1,40 @@
+
+
+input:hover {
+    transform: scale(1.008);
+}
+
+input.btn[type="submit"]:hover {
+    border: 1px solid black;
+}
+
+button {
+    margin-top: 50px;
+    opacity: 1;
+    border-radius: 8px;
+}
+
+button:hover {
+    opacity: 1.2;
+    transform: scale(1.05);
+}
+
+.input-box {
+    height: 500px;
+    width: 600px;
+    display: flex;
+    margin-left: 35px;
+    background-color: #Ececda;
+    border-radius: 9px;
+    box-shadow: 4px 4px 4px 4px rgba(37, 33, 33, 0.192);
+    position: left;
+    border-radius: 10px; /* Set border radius for rounded corners */
+    padding: 20px; /* Add some padding for better visual appearance */
+    min-width: 200px; /* Set a maximum width for the chatbox */
+  }
+
+.input-box::placeholder {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}

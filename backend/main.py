@@ -1,5 +1,7 @@
+import sys
 from flask import Flask, request, jsonify, send_file
 from translate_service import translate, VIDEO_FORMAT
+from scraper import download_deps
 
 app = Flask(__name__)
 
@@ -17,4 +19,9 @@ def get_translate():
     
 
 if __name__ == "__main__":
+    # run script with --download-deps to download the numbers and letters for ASL
+    if len(sys.argv) >= 2:
+        if sys.argv[1] == "--download-deps":
+            download_deps()
+            
     app.run()
