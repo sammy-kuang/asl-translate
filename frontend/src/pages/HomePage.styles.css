@@ -29,10 +29,11 @@
 }
 
 .team-member-text {
-    margin-top: 150px;
+    margin-top: 100px;
     text-align: center;
     color: white;
     text-decoration: none;
+    margin-bottom: 40px;
 }
 
 .team-member-container {

@@ -65,6 +65,13 @@ export default function HomePage() {
                         </p>
                     <h1 className='mission-statement'>Thank you for choosing ASLTranslate. </h1>
                     <h1>Let's speak with our hands and learn with our hearts!</h1>
+
+                    <img src={logoImage}
+                    width='200px'
+                    height='auto'
+                    alt='logo'
+                    onClick = {() => {navigate("/")}}
+                    />
                 </div>
 
                 {/* team member section */}
