@@ -1,7 +1,7 @@
 # ASLTranslate
 Welcome to ASLTranslate, where we believe in breaking down barriers and fostering a world where communication knows no limits.
 
-This was made from the NWHacks 2024 hackathon.
+This was made from the NWHacks 2024 hackathon, check it out on [Devpost!](https://devpost.com/software/asltranslate)
 
 ## Setting up locally
 
