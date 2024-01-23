@@ -3,6 +3,11 @@ Welcome to ASLTranslate, where we believe in breaking down barriers and fosterin
 
 This was made from the NWHacks 2024 hackathon, check it out on [Devpost!](https://devpost.com/software/asltranslate)
 
+Credits to [SigningSavvy](https://www.signingsavvy.com/) for the videos.
+
+https://github.com/sammy-kuang/asl-translate/assets/60021675/5b8bd7c9-d737-47b9-83d5-2cd526e2aa26
+
+
 ## Setting up locally
 
 The only dependency that needs to be handled externally (outside of the frontend and backend) is FFmpeg. This needs to be installed on the machine hosting the server.
